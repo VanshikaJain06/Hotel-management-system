@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Travel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="NewXMLSchema.xsd">
+  <Hotel>
+    <Name>Name</Name>
+    <Hotel_id>0</Hotel_id>
+    <hotel_address>hotel_address</hotel_address>
+    <contact_details>0</contact_details>
+    <booking_date>2001-01-01</booking_date>
+    <room_type>room_type</room_type>
+    <services>services</services>
+    <fare>0</fare>
+  </Hotel>
+</Travel>
