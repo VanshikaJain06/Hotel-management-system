@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="NewStylesheet.xsl" ?>
+
+<Hotel_Management xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="NewXMLSchema.xsd">
+  <Hotel>
+    <hotel_name>PALM SUITES</hotel_name>
+    <hotel_id>1</hotel_id>
+    <address>HSR LAYOUT</address>
+    <contact_number>7896354289</contact_number>
+    <fare>4000</fare>
+  </Hotel>
+    <Hotel>
+    <hotel_name>HOLIDAY INN</hotel_name>
+    <hotel_id>2</hotel_id>
+    <address>BTM LAYOUT</address>
+    <contact_number>7654327890</contact_number>
+    <fare>3000</fare>
+  </Hotel>
+    <Hotel>
+    <hotel_name>HILTON GARDEN</hotel_name>
+    <hotel_id>3</hotel_id>
+    <address>address</address>
+    <contact_number>0</contact_number>
+    <fare>3500</fare>
+  </Hotel>
+    <Hotel>
+    <hotel_name>JW MARIOTT</hotel_name>
+    <hotel_id>4</hotel_id>
+    <address>RAJAJINAGAR</address>
+    <contact_number>83763552829</contact_number>
+    <fare>5000</fare>
+  </Hotel>
+    <Hotel>
+    <hotel_name>FAIRMONT</hotel_name>
+    <hotel_id>5</hotel_id>
+    <address>highland ave</address>
+    <contact_number>9764678398</contact_number>
+    <fare>5000</fare>
+  </Hotel>
+  <Room>
+    <Room_id>1</Room_id>
+    <Room_type>single seater</Room_type>
+    <Room_number>11</Room_number>
+    <Room_status>available</Room_status>
+  </Room>
+  <Room>
+    <Room_id>2</Room_id>
+    <Room_type>premium</Room_type>
+    <Room_number>12</Room_number>
+    <Room_status>available</Room_status>
+  </Room>
+  <Room>
+    <Room_id>3</Room_id>
+    <Room_type>ambassador</Room_type>
+    <Room_number>13</Room_number>
+    <Room_status>unavailable</Room_status>
+  </Room>
+  <Room>
+    <Room_id>4</Room_id>
+    <Room_type>classic</Room_type>
+    <Room_number>14</Room_number>
+    <Room_status>available</Room_status>
+  </Room>
+  <Room>
+    <Room_id>5</Room_id>
+    <Room_type>classic</Room_type>
+    <Room_number>15</Room_number>
+    <Room_status>available</Room_status>
+  </Room>
+  <employee>
+    <employee_id>1</employee_id>
+    <employee_name>rohit</employee_name>
+    <employee_phone>8765432097</employee_phone>
+    <employee_address>avenue road</employee_address>
+  </employee>
+  <employee>
+    <employee_id>2</employee_id>
+    <employee_name>sunny</employee_name>
+    <employee_phone>9234567965</employee_phone>
+    <employee_address> layout</employee_address>
+  </employee>
+  <employee>
+    <employee_id>3</employee_id>
+    <employee_name>mihir</employee_name>
+    <employee_phone>876543210</employee_phone>
+    <employee_address>brik lane</employee_address>
+  </employee>
+  <employee>
+    <employee_id>4</employee_id>
+    <employee_name>john</employee_name>
+    <employee_phone>8765432890</employee_phone>
+    <employee_address> avenue road</employee_address>
+  </employee>
+  <Booking>
+    <Booking_id>456</Booking_id>
+    <Booking_name>priyanka</Booking_name>
+    <Booking_status>0</Booking_status>
+    <Booking_date>2022-01-08</Booking_date>
+  </Booking>
+  <Booking>
+    <Booking_id>789</Booking_id>
+    <Booking_name>lisa</Booking_name>
+    <Booking_status>1</Booking_status>
+    <Booking_date>2022-02-09</Booking_date>
+  </Booking>
+  <Booking>
+    <Booking_id>221</Booking_id>
+    <Booking_name>tina</Booking_name>
+    <Booking_status>1</Booking_status>
+    <Booking_date>2022-03-09</Booking_date>
+  </Booking>
+ 
+  <guest>
+    <guest_id>20</guest_id>
+    <guest_name>priya gupta</guest_name>
+    <guest_email>abc@gmail.com</guest_email>
+    <guest_contact>9876543292</guest_contact>
+  </guest>
+  <guest>
+    <guest_id>21</guest_id>
+    <guest_name>priyanka</guest_name>
+    <guest_email>def@gmail.com</guest_email>
+    <guest_contact>9876543272</guest_contact>
+  </guest>
+  <guest>
+    <guest_id>22</guest_id>
+    <guest_name>john</guest_name>
+    <guest_email>uts@gmail.com</guest_email>
+    <guest_contact>7986534217</guest_contact>
+  </guest>
+  <Payment>
+    <payment_id>513</payment_id>
+    <payment_method>cash</payment_method>
+    <payment_status>received</payment_status>
+    <payment_date>2022-01-01</payment_date>
+  </Payment>
+  <Payment>
+    <payment_id>514</payment_id>
+    <payment_method>card</payment_method>
+    <payment_status>received</payment_status>
+    <payment_date>2022-01-01</payment_date>
+  </Payment>
+  <Payment>
+    <payment_id>515</payment_id>
+    <payment_method>card</payment_method>
+    <payment_status>received</payment_status>
+    <payment_date>2022-01-01</payment_date>
+  </Payment>
+</Hotel_Management>

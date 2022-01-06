@@ -1,32 +1,134 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="Travel">
-<xs:complexType>
-<xs:sequence>
-<xs:element name="Hotel" maxOccurs="unbounded">
-<xs:complexType>
-<xs:sequence>
-<xs:element name="Name" type="xs:string"></xs:element>
-<xs:element name="Hotel_id" type="xs:integer"></xs:element>
-<xs:element name="hotel_address" type="xs:string"></xs:element>
-<xs:element name="contact_details" type="xs:integer"></xs:element>
-<xs:element name="booking_date" type="xs:date"></xs:element>
-<xs:element name="room_type" type="xs:string"></xs:element>
-<xs:element name="services" type="xs:string"></xs:element>
-<xs:element name="fare" type="xs:integer"></xs:element>
-</xs:sequence>
-</xs:complexType>
-</xs:element>
+<xs:element name = "Hotel_Management">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Hotel" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="hotel_name" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="hotel_id" type="xs:integer">
+							</xs:element>
+							
+							<xs:element name="address" type="xs:string">
+							</xs:element>
+							<xs:element name="contact_number" type="xs:integer">
+							</xs:element>
+							<xs:element name="fare" type="xs:float">
+							</xs:element>
+							
+						</xs:sequence>
+
+					</xs:complexType>
+
+				</xs:element>
+				
+				<xs:element name="Room" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Room_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="Room_type" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="Room_number" type="xs:integer">
+							</xs:element>
+							
+							<xs:element name="Room_status" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="employee" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="employee_name"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="employee_phone" type="xs:integer">
+							</xs:element>
+							
+							<xs:element name="employee_address" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Booking" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Booking_id" type="xs:integer">
+							</xs:element>
+							
+							<xs:element name="Booking_name"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="Booking_status" type="xs:integer">
+							</xs:element>
+							<xs:element name="Booking_date" type="xs:date">
+							</xs:element>
+							
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="guest" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="guest_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="guest_name"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="guest_email" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="guest_contact" type="xs:integer">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				
+				
+				
+		 	<xs:element name="Payment" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="payment_id" type="xs:string">
+							</xs:element>
+							
+							<xs:element name="payment_method"  type="xs:string">
+							</xs:element>
+							
+							<xs:element name="payment_status" type="xs:string">
+							</xs:element>
+							<xs:element name="payment_date" type="xs:date">
+							</xs:element>
+							
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 <xs:simpleType name="fare">
 <xs:restriction base="xs:integer">
-<xs:mininclusive value="0"></xs:mininclusive>
+<xs:minInclusive value="0"></xs:minInclusive>
 <xs:maxInclusive value="10"></xs:maxInclusive>
 </xs:restriction>
 </xs:simpleType>
-
-
-
-</xs:sequence>
-</xs:complexType>
-</xs:element>
 </xs:schema>
