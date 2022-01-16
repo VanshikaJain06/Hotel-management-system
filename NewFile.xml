@@ -2,41 +2,41 @@
 <?xml-stylesheet type="text/xsl" href="NewStylesheet.xsl" ?>
 
 <Hotel_Management xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="NewXMLSchema.xsd">
-  <Hotel>
+  <hotel>
     <hotel_name>PALM SUITES</hotel_name>
     <hotel_id>1</hotel_id>
     <address>HSR LAYOUT</address>
     <contact_number>7896354289</contact_number>
     <fare>4000</fare>
-  </Hotel>
-    <Hotel>
+  </hotel>
+    <hotel>
     <hotel_name>HOLIDAY INN</hotel_name>
     <hotel_id>2</hotel_id>
     <address>BTM LAYOUT</address>
     <contact_number>7654327890</contact_number>
     <fare>3000</fare>
-  </Hotel>
+  </hotel>
     <Hotel>
     <hotel_name>HILTON GARDEN</hotel_name>
     <hotel_id>3</hotel_id>
     <address>address</address>
     <contact_number>0</contact_number>
     <fare>3500</fare>
-  </Hotel>
-    <Hotel>
+  </hotel>
+    <hotel>
     <hotel_name>JW MARIOTT</hotel_name>
     <hotel_id>4</hotel_id>
     <address>RAJAJINAGAR</address>
     <contact_number>83763552829</contact_number>
     <fare>5000</fare>
-  </Hotel>
-    <Hotel>
+  </hotel>
+    <hotel>
     <hotel_name>FAIRMONT</hotel_name>
     <hotel_id>5</hotel_id>
     <address>highland ave</address>
     <contact_number>9764678398</contact_number>
     <fare>5000</fare>
-  </Hotel>
+  </hotel>
   <Room>
     <Room_id>1</Room_id>
     <Room_type>single seater</Room_type>
@@ -128,22 +128,22 @@
     <guest_email>uts@gmail.com</guest_email>
     <guest_contact>7986534217</guest_contact>
   </guest>
-  <Payment>
+  <payment>
     <payment_id>513</payment_id>
     <payment_method>cash</payment_method>
     <payment_status>received</payment_status>
     <payment_date>2022-01-01</payment_date>
-  </Payment>
-  <Payment>
+  </payment>
+  <payment>
     <payment_id>514</payment_id>
     <payment_method>card</payment_method>
     <payment_status>received</payment_status>
     <payment_date>2022-01-01</payment_date>
-  </Payment>
-  <Payment>
+  </payment>
+  <payment>
     <payment_id>515</payment_id>
     <payment_method>card</payment_method>
     <payment_status>received</payment_status>
     <payment_date>2022-01-01</payment_date>
-  </Payment>
+  </payment>
 </Hotel_Management>

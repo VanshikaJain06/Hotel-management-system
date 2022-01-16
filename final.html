@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Parser</title>
+    <style>
+        h1 {
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        button {
+            width: 200px;
+            height: 80px;
+            margin-left: 500px;
+            
+            border-radius: 30px;
+        }
+
+        button:hover {
+            background-color: rgb(36, 207, 212);
+            color: #050505;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var xmlDoc;
+        function loadxmldoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    xmlDoc = this.responseXML;
+                    myFunction();
+                }
+            };
+            xmlhttp.open("GET", "NewFile.xml", true);
+            xmlhttp.send();
+        }
+        function myFunction(xml, action) {
+
+            var x, i, table;
+
+            if (action == "delete") {
+                y = xmlDoc.getElementsByTagName('Hotel')[0];
+                xmlDoc.documentElement.removeChild(y);
+                alert('The Element has been removed!');
+            }
+            if (action == "create") {
+                a = prompt("Enter hotel_name");
+                b = prompt("Enter hotel_id");
+                c = prompt("Enter address");
+                d = prompt("Enter contact_number");
+                e = prompt("Enter fare");
+                
+
+
+                var i
+                var details = []
+                Hotel = xmlDoc.createElement("Hotel")
+                details[0] = xmlDoc.createElement("hotel_name");
+                details[0].appendChild(xmlDoc.createTextNode(a))
+                Hotel.appendChild(details[0])
+                details[1] = xmlDoc.createElement("hotel_id")
+                details[1].appendChild(xmlDoc.createTextNode(b))
+                Hotel.appendChild(details[1])
+                details[2] = xmlDoc.createElement("address")
+                details[2].appendChild(xmlDoc.createTextNode(c))
+                Hotel.appendChild(details[2])
+                details[3] = xmlDoc.createElement("contact_number")
+                details[3].appendChild(xmlDoc.createTextNode(d))
+                Hotel.appendChild(details[3])
+                details[4] = xmlDoc.createElement("fare")
+                details[4].appendChild(xmlDoc.createTextNode(e))
+                Hotel.appendChild(details[4])
+                
+
+                xmlDoc.documentElement.appendChild(Hotel);
+            }
+            if (action == "edit") {
+
+                i = parseInt(prompt("Enter index to change")) - 1;
+                a = prompt("Enter hotel_name");
+                b = prompt("Enter hotel_id");
+                c = prompt("Enter address");
+                d = prompt("Enter contact_number");
+                e = prompt("Enter fare");
+                
+                xmlDoc.getElementsByTagName("Hotel")
+                [i].getElementsByTagName("hotel_name")[0].firstChild.nodeValue = a
+
+                xmlDoc.getElementsByTagName("Hotel")
+                [i].getElementsByTagName("hotel_id")[0].firstChild.nodeValue = b
+
+                xmlDoc.getElementsByTagName("Hotel")
+                [i].getElementsByTagName("address")[0].firstChild.nodeValue = c
+
+                xmlDoc.getElementsByTagName("Hotel")
+                [i].getElementsByTagName("contact_number")[0].firstChild.nodeValue = d
+
+                xmlDoc.getElementsByTagName("Hotel")
+                [i].getElementsByTagName("fare")[0].firstChild.nodeValue = e
+
+               
+            }
+
+            table = "<tr><th>hotel_name</th><th>hotel_id</th><th>address</th><th>contact_number</th><th>fare</th></tr>";
+            x = xmlDoc.getElementsByTagName("Hotel")
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("hotel_name")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("hotel_id")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("address")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("contact_number")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("fare")[0].childNodes[0].nodeValue + "</td></tr>"
+                    
+
+
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Hotel</h1>
+    <p><button onclick="loadxmldoc()">HOTEL MANAGEMENT</button></p>
+
+    <table id="demo" border="1">
+        <tr>
+            <th>hotel_name</th>
+            <th>hotel_id</th>
+            <th>address</th>
+            <th>contact_number</th>
+            <th>fare</th>
+            
+        </tr>
+    </table>
+
+    <input type="button" value="Remove" onclick="myFunction(xmlDoc,'delete')" />
+    <input type="button" value="Add" onclick="myFunction(xmlDoc,'create')" name="add" />
+    <input type="button" value="Edit" onclick="myFunction(xmlDoc,'edit')" name="edit" />
+
+</body>
+
+</html>
