@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <style>
+        .form-back {
+            background-image: url("https://schoolofeducationchristuniversity.files.wordpress.com/2014/07/cropped-dsc_0029-1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="row align-items-center p-4 m-0 border-bottom header">
+        <div class="col-2">
+            <img class="h-50" src="https://pbs.twimg.com/media/ELaXXDQUwAA4pW4.png" alt="LOGO" width="350px" />
+        </div>
+        <div class="col-8 text-center">
+            <div class="display-4"><i><b><u>FEEDBACK FORM</u></b></i></div>
+        </div>
+    </div>
+    <div class="row m-0 justify-content-center form-back">
+        <div class="col-6 rounded" style="
+          background-color: rgba(212, 212, 212, 0.5);
+          margin-bottom: 10rem;
+          margin-top: 10rem;
+        ">
+            <div class="text-center p-2">
+                <h2>Campus Visit</h2>
+            </div>
+            <form action="">
+                <div class="input-group mb-3">
+                    <input id="name1" type="text" class="form-control" placeholder="Name" />
+                </div>
+                <div class="input-group mb-3">
+                    <input id="address" type="text" class="form-control" placeholder="Address" />
+                </div>
+                <div class="input-group mb-3">
+                    <input id="email" type="text" class="form-control" placeholder="Email" />
+                </div>
+                <div class="input-group mb-3">
+                    <input id="username" type="text" class="form-control" placeholder="Username" />
+                </div>
+                <div class="input-group mb-3">
+                    <input id="password" type="password" class="form-control" placeholder="Password" />
+                </div>
+                <label class="h5 mt-3">What feature of the college grabbed your attention?</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="stuCheck" type="checkbox" name="likeAbout" />
+                        </div>
+                    </div>
+                    <p class="form-control">Student</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="locCheck" type="checkbox" name="likeAbout" />
+                        </div>
+                    </div>
+                    <p class="form-control">Location</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="camCheck" type="checkbox" name="likeAbout" />
+                        </div>
+                    </div>
+                    <p class="form-control">Campus</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="atmCheck" type="checkbox" name="likeAbout" />
+                        </div>
+                    </div>
+                    <p class="form-control">Atmosphere</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="dorCheck" type="checkbox" name="likeAbout" />
+                        </div>
+                    </div>
+                    <p class="form-control">Dorm Rooms</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="spoCheck" type="checkbox" name="likeAbout" />
+                        </div>
+                    </div>
+                    <p class="form-control">Sports</p>
+                </div>
+                <label class="h5 mt-3">Where did u hear about us?</label>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="friRad" type="radio" name="hearUs" />
+                        </div>
+                    </div>
+                    <p class="form-control">Friends</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="telRad" type="radio" name="hearUs" />
+                        </div>
+                    </div>
+                    <p class="form-control">Television</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="intRad" type="radio" name="hearUs" />
+                        </div>
+                    </div>
+                    <p class="form-control">Internet</p>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input id="othRad" type="radio" name="hearUs" />
+                        </div>
+                    </div>
+                    <p class="form-control">Other</p>
+                </div>
+                <div class="input-group mb-3">
+                    <textarea class="form-control" placeholder="Comments (min 10 characters, optional)"
+                        id="comment"></textarea>
+                </div>
+
+                <div class="row justify-content-end mb-3">
+                    <div class="btn btn-secondary mx-3" onclick="reset()">Clear</div>
+                    <div class="btn btn-success mx-3" onclick="validateAndSubmit()">
+                        Submit
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var name1 = document.getElementById("name1");
+        var address = document.getElementById("address");
+        var email = document.getElementById("email");
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var stuCheck = document.getElementById("stuCheck");
+        var locCheck = document.getElementById("locCheck");
+        var camCheck = document.getElementById("camCheck");
+        var atmCheck = document.getElementById("atmCheck");
+        var dorCheck = document.getElementById("dorCheck");
+        var spoCheck = document.getElementById("spoCheck");
+        var friRadio = document.getElementById("friRadio");
+        var telRadio = document.getElementById("telRadio");
+        var intRadio = document.getElementById("intRadio");
+        var othRadio = document.getElementById("othRadio");
+        var comment = document.getElementById("comment");
+        var heardFrom = "";
+        var likedAbout = [];
+        name1.oninput = function () {
+            var regex = /[^a-z]/gi;
+            name1.value = name1.value.replace(regex, "");
+        };
+        function validateAndSubmit() {
+            var nameReg = /([a-z])/gi;
+            if (!nameReg.test(name1.value.trim())) {
+                alert("Name cannot be empty or contain numbers");
+                return;
+            }
+            if (!address.value.trim()) {
+                alert("Address cannot be empty");
+                return;
+            }
+            var emailid = /^\w+([\.-]?\w+)+@(christuniversity.in|christuniversity.com)$/
+            if (!emailid.test(email.value)) {
+                alert("Invalid Email")
+                alert("Only official mail allowed")
+                return
+            }
+            if (!username.value.trim() || username.length < 8) {
+                alert("Invalid username");
+                return;
+            }
+            var passReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^_+={}|:"<>,.?])[A-Za-z\d@$!%*?&]{8,}$/
+            if (!passReg.test(password.value)) {
+                alert("Password must contain atleast 1 Upper Case, 1 Lower Case, 1 Digit, 1 Special Character and It should be minimum 8 characters.")
+                return;
+            }
+            var checked = false;
+            document.getElementsByName("likeAbout").forEach((x) => {
+                if (x.checked) {
+                    likedAbout.push(x.id);
+                    checked = true;
+                }
+            });
+            if (!checked) {
+                alert("Please select- What feature of the college grabbed your attention??");
+                return;
+            }
+            checked = false;
+            document.getElementsByName("hearUs").forEach((x) => {
+                if (x.checked) {
+                    heardFrom = x.id;
+                    checked = true;
+                }
+            });
+            if (!checked) {
+                alert("Please select- Where did u hear about us?");
+                return;
+            }
+            if (comment.value && !(comment.value.length > 10)) {
+                alert("Please write a comment at least 15 characters long.");
+                return;
+            }
+            alert("Form Submitted.")
+        }
+        function reset() {
+            name1.value = "";
+            address.value = "";
+            email.value = "";
+            username.value = "";
+            password.value = "";
+            comment.value = "";
+            document.getElementsByName("likeAbout").forEach((x) => x.checked = false);
+            document.getElementsByName("hearUs").forEach((x) => x.checked = false);
+        }
+    </script>
+</body>
+
+</html>
