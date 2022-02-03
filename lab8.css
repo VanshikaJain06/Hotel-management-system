@@ -1,0 +1,22 @@
+body{
+    background-color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+table{
+    border: 1px solid black;
+    margin-left: 15%;
+    margin-top: 10%;
+    border-radius: 20px;
+    
+}
+td{
+    padding: 10px;
+    border: 1px solid rgb(10, 94, 38);
+}
+th{
+    text-align: center;
+    border: 1px solid orange;
+    background-color: orange;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}

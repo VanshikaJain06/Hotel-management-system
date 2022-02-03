@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="lab8.js"></script>
+    <link rel="stylesheet" href="lab8.css">
+</head>
+<body ng-app="Packages">
+    <div ng-controller="Packagesctrl">
+        Rows to display:<input type="number" step="1" min="0" max="7" ng-model="rowlimit"/><br><br>
+        Search:<input type="text" placeholder="Search for hotel details" ng-model="search"><br><br>
+        Enter the number of characters:<input type="text" placeholder="Enter no. of characters" ng-model="limit"><br><br>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Date of availability</th>
+                <th>Location</th>
+                <th>Rating</th>
+                <th>Price(number)</th>
+                <th>Price(Currency)</th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="htl in hotels|limitTo:rowlimit|filter:search">
+                    <td>{{htl.name|namefilter:limit}}</td>
+                    <td>{{htl.doa|date:"dd/MM/yyyy"}}</td>
+                    <td>{{htl.location|uppercase}}</td>
+                    <td>{{htl.rating|lowercase}}</td>
+                    <td>{{htl.price|number:0}}</td>
+                    <td>&#8377;{{htl.price|number:0}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
