@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="test5.js"></script>
+    
+</head>
+<body ng-controller="myctrl">
+
+
+
+    <table cellpadding="2" cellspacing="2" border="1">
+        
+            <tr>
+                <th>Name</th>
+                <th>Date of availability</th>
+                <th>Location</th>
+                <th>Rating</th>
+                <th>Price(number)</th>
+                <th>Price(Currency)</th>
+            </tr>
+            
+                <tr ng-repeat="htl in hotels">
+                    <td>{{htl.name}}</td>
+                    <td>{{htl.doa}}</td>
+                    <td>{{htl.location}}</td>
+                    <td>{{htl.rating}}</td>
+                    <td>{{htl.price}}</td>
+                    <td>&#8377;{{htl.price}}</td>
+                </tr>
+            
+        </table>
+    
+    
+</body>
+</html>
