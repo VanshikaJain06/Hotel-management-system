@@ -39,32 +39,32 @@ var connection=mysql.createConnection(
         })
     })
 
-// app.get('/add',(req,res)=>
-// {
-//     var post={Name:'Kevin',Ecode:'Emp007',Salary:25000};
-//     var sql='INSERT INTO employee SET ?';
-//     var query=connection.query(sql,post,(err,result)=>
-//     {
-//         if(err) throw error;
-//         res.send("Inserted Rows.....")
-//     });
-// });
-// app.get('/update/:id',(req,res)=>
-// {
-//     var name1='Reena'
-//     var sql=`UPDATE employee SET Name='${name1}' WHERE Empid=${req.params.id}`;
-//     var query=connection.query(sql,(err,result)=>
-//     {
-//         if(err) throw err;
-//         res.send("Updated the Rows.....")
-//     });
-// });
-// app.get('/delete/:id',(req,res)=>
-// {
-//     var sql=`DELETE FROM employee WHERE Empid=${req.params.id}`;
-//     var query=connection.query(sql,(err,result)=>
-//     {
-//         if(err) throw err;
-//         res.send("Deleted the Rows.....")
-//     });
-// });
+ app.get('/add',(req,res)=>
+ {
+     var post={Name:'Rohit',Ecode:'Emp007',Salary:25000};
+     var sql='INSERT INTO employee SET ?';
+     var query=connection.query(sql,post,(err,result)=>
+     {
+         if(err) throw error;
+         res.send("Inserted Rows.....")
+    });
+ });
+ app.get('/update/:id',(req,res)=>
+ {
+   var name1='Reena'
+    var sql=`UPDATE employee SET Name='${name1}' WHERE Empid=${req.params.id}`;
+    var query=connection.query(sql,(err,result)=>
+    {
+       if(err) throw err;
+       res.send("Updated the Rows.....")
+   });
+ });
+ app.get('/delete/:id',(req,res)=>
+ {
+     var sql=`DELETE FROM employee WHERE Empid=${req.params.id}`;
+    var query=connection.query(sql,(err,result)=>
+   {
+      if(err) throw err;
+       res.send("Deleted the Rows.....")
+   });
+ });
